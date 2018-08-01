@@ -1,5 +1,8 @@
 <div class="ui container">
   <p>Christine's App</p>
+  <div class="ui raised segment">
+    {{phrases.en_active_txt}}
+  </div>
   <div class="ui raised segment" >
       <button class="mini ui button" (click)="send_to_current_phrase(i)" *ngFor="let i of answer_phrase">{{i}}</button>
   </div>
@@ -9,4 +12,5 @@
   <div class="ui raised segment" >
     <p *ngFor="let i of corrected_text" >{{i}}</p>
   </div>
+  <button class="ui basic button" (click)="getNewText(phrases.indexOfText)">Next Text!</button>
 </div>
